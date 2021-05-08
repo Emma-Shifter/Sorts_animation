@@ -12,9 +12,9 @@ void Shella_sort();
 void choosing_sort();
 void saming_sort();
 
-// to - куда перемещаем
-// dt - время кадра в секундах
-// speed - скорость в "пикселях в секунду"
+// to - РєСѓРґР° РїРµСЂРµРјРµС‰Р°РµРј
+// dt - РІСЂРµРјСЏ РєР°РґСЂР° РІ СЃРµРєСѓРЅРґР°С…
+// speed - СЃРєРѕСЂРѕСЃС‚СЊ РІ "РїРёРєСЃРµР»СЏС… РІ СЃРµРєСѓРЅРґСѓ"
 void moveTo(Transformable& obj, Vector2f to, float dt, float speed)
 {
     if (obj.getPosition() != to)
@@ -29,7 +29,7 @@ void moveTo(Transformable& obj, Vector2f to, float dt, float speed)
 
 void menu(RenderWindow& window)
 {
-    //Графика
+    //Р“СЂР°С„РёРєР°
     Image character_image;
     character_image.loadFromFile("images/character.png");
     Texture character_texture;
@@ -50,7 +50,7 @@ void menu(RenderWindow& window)
     button_addition_sort.loadFromFile("images/button_addition_sort.png");
     button_Shella_sort.loadFromFile("images/button_Shella_sort.png");
     button_choosing_sort.loadFromFile("images/button_choosing_sort.png");
-    button_saming_sort.loadFromFile("images/button_saming_sort.png"); //сортировка слиянием
+    button_saming_sort.loadFromFile("images/button_saming_sort.png"); //СЃРѕСЂС‚РёСЂРѕРІРєР° СЃР»РёСЏРЅРёРµРј
     button_exit.loadFromFile("images/button_exit.png");
     Sprite bubble(button_bubble_sort), shake(button_shake_sort), addition(button_addition_sort), Shella(button_Shella_sort), choosing(button_choosing_sort), saming(button_saming_sort), exit(button_exit);
     bubble.setPosition(30, 30);
@@ -114,7 +114,7 @@ void bubble_sort()
     RenderWindow window_bubble_sort(VideoMode(1070, 700), "Bubble Sort");
     window_bubble_sort.setFramerateLimit(60);
 
-    //Графика
+    //Р“СЂР°С„РёРєР°
     Texture background_sorts_texture, button_start_texture, button_exit_texture, character_texture, text_dialog_texture;
     background_sorts_texture.loadFromFile("images/background_sorts.png");
     button_start_texture.loadFromFile("images/button_start.png");
@@ -180,7 +180,7 @@ void bubble_sort()
 
         if (Mouse::isButtonPressed(Mouse::Left))
         {
-            if (bubble_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - координаты позиций
+            if (bubble_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРѕР·РёС†РёР№
             {
                 //moveTo(cube_2, Vector2f(30, 175), dt, 50);
                 //moveTo(cube_4, Vector2f(160, 175), dt, 50);
@@ -216,11 +216,11 @@ void bubble_sort()
 
         window_bubble_sort.clear();
         
-        text.setString(L"Это сортировка пузырьком! Мы сравниваем ");
+        text.setString(L"Р­С‚Рѕ СЃРѕСЂС‚РёСЂРѕРІРєР° РїСѓР·С‹СЂСЊРєРѕРј! РњС‹ СЃСЂР°РІРЅРёРІР°РµРј ");
         text.setPosition(100, 530);
-        text2.setString(L"два соседних числа и меняем местами, если");
+        text2.setString(L"РґРІР° СЃРѕСЃРµРґРЅРёС… С‡РёСЃР»Р° Рё РјРµРЅСЏРµРј РјРµСЃС‚Р°РјРё, РµСЃР»Рё");
         text2.setPosition(100, 550);
-        text3.setString(L"они стоят не по порядку. Продолжаем :)");
+        text3.setString(L"РѕРЅРё СЃС‚РѕСЏС‚ РЅРµ РїРѕ РїРѕСЂСЏРґРєСѓ. РџСЂРѕРґРѕР»Р¶Р°РµРј :)");
         text3.setPosition(100, 570);
 
         window_bubble_sort.draw(background_sorts);
@@ -250,7 +250,7 @@ void shake_sort()
     RenderWindow window_shake_sort(VideoMode(1070, 700), "Shake Sort");
     window_shake_sort.setFramerateLimit(60);
 
-    //Графика
+    //Р“СЂР°С„РёРєР°
     Texture background_sorts_texture, button_start_texture, button_exit_texture, character_texture, text_dialog_texture;
     background_sorts_texture.loadFromFile("images/background_sorts.png");
     button_start_texture.loadFromFile("images/button_start.png");
@@ -320,7 +320,7 @@ void shake_sort()
 
         if (Mouse::isButtonPressed(Mouse::Left))
         {
-            if (shake_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - координаты позиций
+            if (shake_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРѕР·РёС†РёР№
             {
                 //moveTo(cube_2, Vector2f(30, 175), dt, 50);
                 //moveTo(cube_4, Vector2f(160, 175), dt, 50);
@@ -353,13 +353,13 @@ void shake_sort()
 
         window_shake_sort.clear();
         
-        text.setString(L"Это шейкерная сортировка! Принцип тот");
+        text.setString(L"Р­С‚Рѕ С€РµР№РєРµСЂРЅР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°! РџСЂРёРЅС†РёРї С‚РѕС‚");
         text.setPosition(100, 530);
-        text2.setString(L"же что и в пузырьковой сортировки, ");
+        text2.setString(L"Р¶Рµ С‡С‚Рѕ Рё РІ РїСѓР·С‹СЂСЊРєРѕРІРѕР№ СЃРѕСЂС‚РёСЂРѕРІРєРё, ");
         text2.setPosition(100, 550);
-        text3.setString(L"только мы идем ещё и в обратную");
+        text3.setString(L"С‚РѕР»СЊРєРѕ РјС‹ РёРґРµРј РµС‰С‘ Рё РІ РѕР±СЂР°С‚РЅСѓСЋ");
         text3.setPosition(100, 570);
-        text4.setString(L"сторону. Продолжаем :)");
+        text4.setString(L"СЃС‚РѕСЂРѕРЅСѓ. РџСЂРѕРґРѕР»Р¶Р°РµРј :)");
         text4.setPosition(100, 590);
 
         window_shake_sort.draw(background_sorts);
@@ -388,7 +388,7 @@ void addition_sort()
     RenderWindow window_addition_sort(VideoMode(1070, 700), "Addition Sort");
     window_addition_sort.setFramerateLimit(60);
 
-    //Графика
+    //Р“СЂР°С„РёРєР°
     Texture background_sorts_texture, button_start_texture, button_exit_texture, character_texture, text_dialog_texture;
     background_sorts_texture.loadFromFile("images/background_sorts.png");
     button_start_texture.loadFromFile("images/button_start.png");
@@ -458,7 +458,7 @@ void addition_sort()
 
         if (Mouse::isButtonPressed(Mouse::Left))
         {
-            if (addition_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - координаты позиций
+            if (addition_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРѕР·РёС†РёР№
             {
                 //moveTo(cube_2, Vector2f(30, 175), dt, 50);
                 //moveTo(cube_4, Vector2f(160, 175), dt, 50);
@@ -485,13 +485,13 @@ void addition_sort()
 
         window_addition_sort.clear();
 
-        text.setString(L"Это сортировка вставками! Мы делим список");
+        text.setString(L"Р­С‚Рѕ СЃРѕСЂС‚РёСЂРѕРІРєР° РІСЃС‚Р°РІРєР°РјРё! РњС‹ РґРµР»РёРј СЃРїРёСЃРѕРє");
         text.setPosition(100, 530);
-        text2.setString(L"на отрорт. и неотсорт.. Берем элемент из");
+        text2.setString(L"РЅР° РѕС‚СЂРѕСЂС‚. Рё РЅРµРѕС‚СЃРѕСЂС‚.. Р‘РµСЂРµРј СЌР»РµРјРµРЅС‚ РёР·");
         text2.setPosition(100, 550);
-        text3.setString(L" неотсортированного и вставляем в нужное");
+        text3.setString(L" РЅРµРѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅРѕРіРѕ Рё РІСЃС‚Р°РІР»СЏРµРј РІ РЅСѓР¶РЅРѕРµ");
         text3.setPosition(100, 570);
-        text4.setString(L" место отсортированного. Продолжаем :)");
+        text4.setString(L" РјРµСЃС‚Рѕ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅРѕРіРѕ. РџСЂРѕРґРѕР»Р¶Р°РµРј :)");
         text4.setPosition(100, 590);
 
         window_addition_sort.draw(background_sorts);
@@ -521,7 +521,7 @@ void Shella_sort()
     RenderWindow window_Shella_sort(VideoMode(1070, 700), "Shella Sort");
     window_Shella_sort.setFramerateLimit(60);
 
-    //Графика
+    //Р“СЂР°С„РёРєР°
     Texture background_sorts_texture, button_start_texture, button_exit_texture, character_texture, text_dialog_texture;
     background_sorts_texture.loadFromFile("images/background_sorts.png");
     button_start_texture.loadFromFile("images/button_start.png");
@@ -591,7 +591,7 @@ void Shella_sort()
 
         if (Mouse::isButtonPressed(Mouse::Left))
         {
-            if (Shella_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - координаты позиций
+            if (Shella_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРѕР·РёС†РёР№
             {
                 moveTo(cube_1, Vector2f(30, 175), dt, 50);
                 //moveTo(cube_4, Vector2f(550, 175), dt, 50);
@@ -614,13 +614,13 @@ void Shella_sort()
 
         window_Shella_sort.clear();
 
-        text.setString(L"Это сортировка Шелла! Мы вводим шаг (n/2)");
+        text.setString(L"Р­С‚Рѕ СЃРѕСЂС‚РёСЂРѕРІРєР° РЁРµР»Р»Р°! РњС‹ РІРІРѕРґРёРј С€Р°Рі (n/2)");
         text.setPosition(100, 530);
-        text2.setString(L"и рассматриваем элементы с шагом. Меняем");
+        text2.setString(L"Рё СЂР°СЃСЃРјР°С‚СЂРёРІР°РµРј СЌР»РµРјРµРЅС‚С‹ СЃ С€Р°РіРѕРј. РњРµРЅСЏРµРј");
         text2.setPosition(100, 550);
-        text3.setString(L"при необходимости. Уменьшаем шаг в 2 раза.");
+        text3.setString(L"РїСЂРё РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё. РЈРјРµРЅСЊС€Р°РµРј С€Р°Рі РІ 2 СЂР°Р·Р°.");
         text3.setPosition(100, 570);
-        text4.setString(L"Продолжаем :)");
+        text4.setString(L"РџСЂРѕРґРѕР»Р¶Р°РµРј :)");
         text4.setPosition(100, 590);
 
         window_Shella_sort.draw(background_sorts);
@@ -650,7 +650,7 @@ void choosing_sort()
     RenderWindow window_choosing_sort(VideoMode(1070, 700), "Choosing Sort");
     window_choosing_sort.setFramerateLimit(60);
 
-    //Графика
+    //Р“СЂР°С„РёРєР°
     Texture background_sorts_texture, button_start_texture, button_exit_texture, character_texture, text_dialog_texture;
     background_sorts_texture.loadFromFile("images/background_sorts.png");
     button_start_texture.loadFromFile("images/button_start.png");
@@ -720,7 +720,7 @@ void choosing_sort()
 
         if (Mouse::isButtonPressed(Mouse::Left))
         {
-            if (choosing_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - координаты позиций
+            if (choosing_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРѕР·РёС†РёР№
             {
                 //moveTo(cube_1, Vector2f(30, 175), dt, 50);
                 moveTo(cube_1, Vector2f(30, 175), dt, 50);
@@ -749,13 +749,13 @@ void choosing_sort()
 
         window_choosing_sort.clear();
 
-        text.setString(L"Это сортировка выбором! Мы выбираем ");
+        text.setString(L"Р­С‚Рѕ СЃРѕСЂС‚РёСЂРѕРІРєР° РІС‹Р±РѕСЂРѕРј! РњС‹ РІС‹Р±РёСЂР°РµРј ");
         text.setPosition(100, 530);
-        text2.setString(L"наименьшее число, путем сравнения с ");
+        text2.setString(L"РЅР°РёРјРµРЅСЊС€РµРµ С‡РёСЃР»Рѕ, РїСѓС‚РµРј СЃСЂР°РІРЅРµРЅРёСЏ СЃ ");
         text2.setPosition(100, 550);
-        text3.setString(L"найденным ранее минимумом. Ставим в ");
+        text3.setString(L"РЅР°Р№РґРµРЅРЅС‹Рј СЂР°РЅРµРµ РјРёРЅРёРјСѓРјРѕРј. РЎС‚Р°РІРёРј РІ ");
         text3.setPosition(100, 570);
-        text4.setString(L"конец отсорт. списка. Продолжаем :)");
+        text4.setString(L"РєРѕРЅРµС† РѕС‚СЃРѕСЂС‚. СЃРїРёСЃРєР°. РџСЂРѕРґРѕР»Р¶Р°РµРј :)");
         text4.setPosition(100, 590);
 
         window_choosing_sort.draw(background_sorts);
@@ -785,7 +785,7 @@ void saming_sort()
     RenderWindow window_saming_sort(VideoMode(1070, 700), "Saming Sort");
     window_saming_sort.setFramerateLimit(60);
 
-    //Графика
+    //Р“СЂР°С„РёРєР°
     Texture background_sorts_texture, button_start_texture, button_exit_texture, character_texture, text_dialog_texture;
     background_sorts_texture.loadFromFile("images/background_sorts.png");
     button_start_texture.loadFromFile("images/button_start.png");
@@ -855,7 +855,7 @@ void saming_sort()
 
         if (Mouse::isButtonPressed(Mouse::Left))
         {
-            if (saming_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - координаты позиций
+            if (saming_sort_num == 1) //30, 160, 290, 420, 550, 680, 810, 940 - РєРѕРѕСЂРґРёРЅР°С‚С‹ РїРѕР·РёС†РёР№
             {
                 //moveTo(cube_2, Vector2f(30, 175), dt, 50);
                 //moveTo(cube_4, Vector2f(160, 175), dt, 50);
@@ -884,13 +884,13 @@ void saming_sort()
 
         window_saming_sort.clear();
 
-        text.setString(L"Это сортировка слиянием! Мы делим список");
+        text.setString(L"Р­С‚Рѕ СЃРѕСЂС‚РёСЂРѕРІРєР° СЃР»РёСЏРЅРёРµРј! РњС‹ РґРµР»РёРј СЃРїРёСЃРѕРє");
         text.setPosition(100, 530);
-        text2.setString(L"пополам пока не останется по одному ");
+        text2.setString(L"РїРѕРїРѕР»Р°Рј РїРѕРєР° РЅРµ РѕСЃС‚Р°РЅРµС‚СЃСЏ РїРѕ РѕРґРЅРѕРјСѓ ");
         text2.setPosition(100, 550);
-        text3.setString(L"элементу. Затем начинаем сравнивать ");
+        text3.setString(L"СЌР»РµРјРµРЅС‚Сѓ. Р—Р°С‚РµРј РЅР°С‡РёРЅР°РµРј СЃСЂР°РІРЅРёРІР°С‚СЊ ");
         text3.setPosition(100, 570);
-        text4.setString(L"первые элементы списков. Продолжаем :)");
+        text4.setString(L"РїРµСЂРІС‹Рµ СЌР»РµРјРµРЅС‚С‹ СЃРїРёСЃРєРѕРІ. РџСЂРѕРґРѕР»Р¶Р°РµРј :)");
         text4.setPosition(100, 590);
 
         window_saming_sort.draw(background_sorts);
